@@ -108,3 +108,118 @@ Processing by RestaurantsController#index as */*
 Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 5.4ms)
 
 
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:03:53 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  Parameters: {"access_token"=>"{access-token}", "token_type"=>"{type}", "expires_in"=>"{seconds-til-expiration}", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:03:59 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-24 15:04:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:04:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:13 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:23 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:07:37 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:46:35 +0000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-24 15:46:38 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/maseehussain/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/maseehussain/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:46:46 +0000
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (1.07ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:52:00 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 5.0ms)
+
+
