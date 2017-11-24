@@ -108,3 +108,148 @@ Processing by RestaurantsController#index as */*
 Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 5.4ms)
 
 
+  [1m[35m (1.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "veganapp_development"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "veganapp_test"[0m
+  [1m[35m (3154.0ms)[0m  [1m[35mCREATE DATABASE "veganapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (350.4ms)[0m  [1m[35mCREATE DATABASE "veganapp_test" ENCODING = 'unicode'[0m
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6225934153167971130)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurants (20171124144942)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "name" character varying, "address" character varying, "image" character varying, "description" character varying, "lat" float, "lng" float, "instagram" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171124144942"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-24 14:53:12.568335"], ["updated_at", "2017-11-24 14:53:12.568335"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6225934153167971130)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "restaurants"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "image", "description", "lat", "lng", "instagram", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Redemption Bar"], ["address", "320 Old Street, London, EC1V 9DR"], ["image", "https://www.redemptionbar.co.uk/uploads/1/0/8/9/108990523/bc2a2603_2_orig.jpg"], ["description", "Redemption brings exciting and delicious menus to life in order to give people maximum nutrition and taste. We try to delight even the most sceptical meat lovers and to challenge the convention that healthy food is boring or lacking finesse. So, as well as our delicious alcohol-free cocktails, we serve a full range of fresh, super-healthy dishes, including raw desserts that are good for you."], ["lat", 51.526589], ["lng", -0.08201], ["instagram", "https://www.instagram.com/redemptionbar/?__a=1"], ["created_at", "2017-11-24 14:53:12.657961"], ["updated_at", "2017-11-24 14:53:12.657961"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "image", "description", "lat", "lng", "instagram", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Cookdaily"], ["address", "48, 2-4 Bethnal Green Rd, London, E1 6GY"], ["image", "https://media.timeout.com/images/102917642/630/472/image.jpg"], ["description", "Cook Daily is a restaurant in Shoreditch that’s defying the hipster stereotypes and becoming the unofficial headquarters for a new tribe of proud vegan."], ["lat", 51.523481], ["lng", -0.076273], ["instagram", "https://www.instagram.com/kingcookdaily/?__a=1"], ["created_at", "2017-11-24 14:53:12.662170"], ["updated_at", "2017-11-24 14:53:12.662170"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "image", "description", "lat", "lng", "instagram", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "mildreds"], ["address", "9 Jamestown Rd, London, NW1 7BW"], ["image", "http://www.mildreds.co.uk/content/uploads/2016/02/8c237f_04ab0d8101d56e42a0cf81035b717661.jpg"], ["description", "Fresh and colourful food full of flavour is cooked daily on the premises. We use organic ingredients where possible and endeavour to source small businesses for our supplies. Our four sites in London, each with their own style and personality, offer informal and friendly service in a lively atmosphere. Often surprising and seducing hardened carnivores and with many of our dishes vegan and gluten free mildreds can offer a warm welcome to all."], ["lat", 51.523481], ["lng", -0.076273], ["instagram", "https://www.instagram.com/mildredsrestaurants/?__a=1"], ["created_at", "2017-11-24 14:53:12.666101"], ["updated_at", "2017-11-24 14:53:12.666101"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 14:54:44 +0000
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Parameters: {"firstName"=>"James", "lastName"=>"Tang", "email"=>"test7@ga.co", "avatar"=>"http://fillmurray.com/300/300", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]", "restaurant"=>{}}
+  [1m[36mRestaurant Load (14.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 50ms (Views: 24.8ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-24 15:04:13 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (12.5ms)
+Completed 200 OK in 83ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-24 15:04:16 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:04:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:23 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (3.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 49ms (Views: 26.4ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-24 15:04:41 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jamestang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:48 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:05:28 +0000
+Processing by RestaurantsController#index as HTML
+  Parameters: {"firstName"=>"James", "lastName"=>"Tang", "email"=>"test7@ga.co", "avatar"=>"http://fillmurray.com/300/300", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]", "restaurant"=>{}}
+  [1m[36mRestaurant Load (1.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:07:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:08:03 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/restaurants" for 127.0.0.1 at 2017-11-24 15:08:11 +0000
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"restaurants"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 77ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=restaurants):
+  
+app/controllers/restaurants_controller.rb:44:in `set_restaurant'
