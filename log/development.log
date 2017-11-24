@@ -108,6 +108,7 @@ Processing by RestaurantsController#index as */*
 Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 5.4ms)
 
 
+<<<<<<< HEAD
   [1m[35m (1.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "veganapp_development"[0m
   [1m[35m (0.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "veganapp_test"[0m
   [1m[35m (3154.0ms)[0m  [1m[35mCREATE DATABASE "veganapp_development" ENCODING = 'unicode'[0m
@@ -163,6 +164,25 @@ Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms)
 Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:04:19 +0000
   
 ActionController::RoutingError (No route matches [GET] "/restaurant"):
+=======
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:03:53 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  Parameters: {"access_token"=>"{access-token}", "token_type"=>"{type}", "expires_in"=>"{seconds-til-expiration}", "restaurant"=>{}}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:03:59 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-24 15:04:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+>>>>>>> f4b06f67d6c18867b49060bded295b59ba4036d6
   
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
@@ -185,6 +205,7 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:23 +0000
 Processing by RestaurantsController#index as HTML
   [1m[36mRestaurant Load (3.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
@@ -212,6 +233,9 @@ Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:07:56 +0000
+=======
+Started GET "/restaurant" for 127.0.0.1 at 2017-11-24 15:04:09 +0000
+>>>>>>> f4b06f67d6c18867b49060bded295b59ba4036d6
   
 ActionController::RoutingError (No route matches [GET] "/restaurant"):
   
@@ -236,6 +260,7 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:08:03 +0000
 Processing by RestaurantsController#index as HTML
   [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
@@ -253,3 +278,56 @@ Completed 404 Not Found in 77ms (ActiveRecord: 1.1ms)
 ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=restaurants):
   
 app/controllers/restaurants_controller.rb:44:in `set_restaurant'
+=======
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:13 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:04:23 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:07:37 +0000
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (1.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:46:35 +0000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-24 15:46:38 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/maseehussain/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/maseehussain/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:46:46 +0000
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (1.07ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-11-24 15:52:00 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as */*
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+No serializer found for resource: #<Restaurant id: 1, name: "Redemption Bar", address: "320 Old Street, London, EC1V 9DR", image: "https://www.redemptionbar.co.uk/uploads/1/0/8/9/10...", description: "Redemption brings exciting and delicious menus to ...", lat: 51.526589, lng: -0.08201, instagram: "https://www.instagram.com/redemptionbar/?__a=1", created_at: "2017-11-24 14:50:31", updated_at: "2017-11-24 14:50:31">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Restaurant::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 5.0ms)
+
+
+>>>>>>> f4b06f67d6c18867b49060bded295b59ba4036d6
